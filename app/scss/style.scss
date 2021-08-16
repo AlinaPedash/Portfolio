@@ -4,5 +4,117 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  background-color: #1E1717;
+  min-height: 90px;
+}
+.header__inner{
+display: flex;
+justify-content: space-between;
+}
+.logo{
+  &__img{
+    margin-top: 10px;
+  }
+}
+.menu{
+&__list{
+display: flex;
+justify-content: flex-end;
+color: #fff;
+}
+&__item{
+margin-top: 40px;
+padding-left: 50px;
+cursor: pointer;
+ }
+&__item:hover{
+  color: #FFA318;
+  font-weight: 700;
+}
+}
+.search{
+  margin-top: 30px;
+ }
+
+.splash{
+  background-image: url('../images/header-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:local;
+  max-width: 100%;
+  height: 100%;
+  &__subtitle{
+  padding-top: 300px;
+  }
+  &__text{
+    max-width: 500px;
+    margin-top: 40px;
+  }
+}
+
+.about{
+  background-color: #3E3A3A;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__photo{
+    margin-top: 80px;
+    max-width: 570px;
+    height: 700px;
+  }
+  &__info{
+    padding-left: 35px;
+  }
+  &__subtitle{
+    margin-top: 260px;
+  }
+}
+.block{
+  &__inner{
+    text-align: center;
+    margin-top: 120px;
+  }
+  &__section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+  &__item{
+    position: relative;
+    width: 350px;
+    height: 378px;
+    background-color: #1E1717;
+    padding: 170px 50px 100px 50px;
+    margin-bottom: 140px;
+  }
+  &__item::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  height: 100px;
+  right: 130px;
+  background-repeat: no-repeat;
+  }
+  .block__item--shoes::before{
+    background-image: url('../images/shoes.svg');
+  }
+  .block__item--bag::before{
+    background-image: url('../images/flat.svg');
+    
+  }
+  .block__item--tshirt::before{
+    background-image: url('../images/tshirt.svg');
+  }
+}
+
+
+
+
+
+ 
 
 @import 'media';
