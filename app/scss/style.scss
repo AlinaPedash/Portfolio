@@ -1,6 +1,7 @@
 
 @import 'vars';
 @import 'fonts';
+@import 'libs';
 @import 'reset';
 @import 'global';
 
@@ -35,25 +36,84 @@ cursor: pointer;
 }
 .search{
   margin-top: 30px;
+  cursor: pointer;
+ }
+ .search:hover{
+  border-bottom: 1px solid #fff;
  }
 
 .splash{
-  background-image: url('../images/header-bg.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment:local;
+&__container{
   max-width: 100%;
-  height: 100%;
-  &__subtitle{
-  padding-top: 300px;
-  }
-  &__text{
-    max-width: 500px;
-    margin-top: 40px;
+  height: 80%;
+}
+&__item{
+  position: relative;
+}
+&__content{
+position: absolute;
+margin: auto;
+top: 10%;
+left: 14%;
+
+}
+&__title{
+  max-width: 500px;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+}
+&__subtitle{
+padding-top: 300px;
+}
+&__text{
+max-width: 500px;
+margin-top: 40px;
+ }
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  li{
+    line-height: 0;
+    padding: 0 5px;
+    button{
+      padding: 0;
+      font-size: 0;
+      background-color: transparent;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #FFA318;
+      position: relative;
+      &::before{
+        content:'';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #FFA318;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.slick-active{
+      button{
+        border-color: #FFA318;
+        &::before{
+          background-color: #FFA318;
+        }
+      }
+    }
   }
 }
+.slick-slide-control00{
 
+}
 .about{
   background-color: #3E3A3A;
   &__inner{
@@ -64,6 +124,7 @@ cursor: pointer;
     margin-top: 80px;
     max-width: 570px;
     height: 700px;
+    box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.3);
   }
   &__info{
     padding-left: 35px;
@@ -110,6 +171,17 @@ cursor: pointer;
     background-image: url('../images/tshirt.svg');
   }
 }
+.gallery{
+  background-color: #1E1717;
+  width: 100%;
+  height: 500px;
+  &__title{
+    text-align: center;
+  }
+  &__subtitle{
+    padding-top: 100px;
+  }
+}
 
 
 
@@ -118,3 +190,23 @@ cursor: pointer;
  
 
 @import 'media';
+
+//           <video autoplay muted loop id="myVideo">
+//   <source src="video/video.mp4" type="video/mp4">
+// </video>
+
+
+// #myVideo {
+//     position: fixed;
+//     right: 0;
+//     bottom: 0;
+//     min-width: 100%;
+//     min-height: 100%;
+// }
+
+//   &__inner{
+//     position: fixed;
+//     bottom: 200;
+//     width: 100%;
+//     padding: 20px;
+// }
