@@ -159,13 +159,12 @@ margin-top: 40px;
   &__section{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding-left: 10px;
     margin-top: 90px;
   }
   &__item{
     position: relative;
-    width: 350px;
+    max-width: 350px;
     height: 378px;
     background-color: #1E1717;
     padding: 170px 50px 100px 50px;
@@ -296,7 +295,7 @@ margin-top: 40px;
   justify-content: space-between;
   margin-top: 120px;
   &__block{
-  width: 560px;
+  max-width: 560px;
   height: 290px;
   background-color: #1E1717;
   padding: 68px 70px 120px 170px;
@@ -480,43 +479,49 @@ margin-top: 40px;
   }
   &__item{
     max-width: 500px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__item-1{
+    display: none;
   }
  }
 }
 @media (max-width: 1106px){
 .block__item{
-  margin-top: 30px;
+  margin: 0 auto;
   margin-bottom: 30px;
  }
  .block__section{
+   flex-direction: column;
+   margin: 0 auto;
    margin-top: 30px;
  }
 }
 
 @media (max-width: 1000px){
-
   .splash{
     &__subtitle{
     padding-top: 250px;
-  } 
-  &__content{
+    } 
+    &__content{
     left: 10px;
+    }
   }
-}
-
-  .title {
+.title {
   margin-top: 20px;
   font-size: 24px;
   line-height: 30px;
 }
 .text {
   font-size: 14px;
-  line-height: 28px;
+  margin-bottom: 10px;
 }
 
 .button{
 display: none;
+}
+.footer__button{
+  display: block;
 }
 .slick-dots{
   display: none !important;
@@ -540,6 +545,47 @@ display: none;
     margin: 30px auto;
   }
  }
+ .block{
+   &__inner{
+     margin-top: 25px;
+   }
+   &__item{
+     padding: 150px 20px 10px 20px;
+     max-width: 343px;
+     height: 288px;
+     margin-top: 10px;
+   }
+   &__section{
+     padding-left: 0;
+   }
+ }
+ .gallery{
+   &__subtitle{
+     padding-top: 60px;
+   }
+ }
+ .team__portfolio{
+ flex-direction: column;
+ 
+}
+.team__photo{
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.our{
+  padding-bottom: 100px;
+}
+.footer{
+  &__inner{
+    flex-wrap: wrap;
+  }
+  &__item{
+   padding-left: 20px;
+  }
+  .footer__social{
+    padding-left: 20px;
+  }
+}
 }
 
 @media (max-width: 860px){
@@ -573,10 +619,10 @@ display: none;
     background-color: #1E1717;
     transition: all 0.3s;
   }
-    &__list.menu__list--active{
-      transform: translateY(0%);
-      transition: all 0.3s;
-    }
+  &__list.menu__list--active{
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
   &__list-link{
     display: block;
     &:hover{
@@ -584,16 +630,32 @@ display: none;
       width: 100%;
     }
   }
+}
   .splash__content{
     left: 10px;
-   top: 80px;
+    top: 80px;
   }
-}
   .splash__subtitle{
     padding-top: 100px;
   }
   .user-nav{
   display: none;
+  }
+  .our__content{
+    flex-direction: column;
+    padding-left: 100px;
+  }
+  .our-comments{
+    flex-direction: column;
+    margin-top: 70px;
+  }
+  .our-comments__block{
+    flex-wrap: wrap;
+    max-width: 560px;
+    height: 200px;
+  }
+  .team__portfolio{
+    padding-bottom: 100px;
   }
  }
 
@@ -601,12 +663,16 @@ display: none;
   .splash__subtitle{
   padding-top: 50px;
   }
+  .footer__inner{
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 450px){
   .splash{
     &__text{
-    margin-top: 0;
+    display: none;
   }
   &__subtitle{
   font-size: 12px;
@@ -624,7 +690,28 @@ display: none;
   }
 }
   .button{
-    margin-top: 10px;
+    margin-top: 15px;
+  }
+  .our-comments__link-1::before,
+  .our-comments__link-2::before{
+    display: none;
+  }
+  .our-comments__block{
+    height: 130px;
+    padding: 20px 20px 0px 20px;
+  }
+  .team__photo{
+    padding-bottom: 10px;
+  }
+  .team__title{
+    margin-bottom: 70px;
+  }
+  .our__t{
+    display: block;
+  padding-left: 0;
+  }
+    .footer__insta{
+    margin-bottom: 20px;
   }
 }
 
@@ -638,7 +725,6 @@ display: none;
   }
 }
   .button{
-  margin-top: 5px;
   font-size: 12px;
   }
  }
